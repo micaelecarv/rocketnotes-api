@@ -1,4 +1,3 @@
-# rocketnotes-api
 
 <h1 align="center"> RocketNotes - API </h1>
 
