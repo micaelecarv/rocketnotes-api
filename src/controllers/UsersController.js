@@ -9,7 +9,6 @@ class UsersController {
     const { name, email, password } = request.body;
 
     const database = await sqliteConnection();
-
     const checkUserExists = await database.get("SELECT * FROM users WHERE email = (?)", [email])
 
     if(checkUserExists) {
@@ -28,11 +27,10 @@ class UsersController {
 
   async update(request, response) {
     const { name, email, password, old_password } = request.body;
-
-    const user_id = request.user_id;
+    const { id } = request.params;
 
     const database = await sqliteConnection();
-    const user = await database.get("SELECT * FROM users WHERE id = (?)", [user_id]);
+    const user = await database.get("SELECT * FROM users WHERE id = (?)", [id]);
 
     if(!user) {
       throw new AppError('Usuário nao encontrado');
