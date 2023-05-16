@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "Micaele Pereira de Carvalho",
   "license": "ISC",
-  "description": "API Desenbvolvida no Explorer",
+  "description": "API Desenvolvida no Explorer",
   "dependencies": {
     "axios": "^1.3.4",
     "bcryptjs": "^2.4.3",
